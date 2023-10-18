@@ -1,0 +1,10 @@
+fschat[llm-judge]==0.2.31
+tqdm
+numpy
+jsonlines
+argparse
+datasets
+requests
+jsonlines
+torch==2.0.1
+shortuuid

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG" />
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta
+      property="og:description"
+      content="SOCIAL MEDIA DESCRIPTION TAG TAG"
+    />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG" />
+    <meta
+      name="twitter:description"
+      content="TWITTER BANNER DESCRIPTION META TAG"
+    />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta
+      name="twitter:image"
+      content="static/images/your_twitter_banner_image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); */
+        text-align: center;
+        /* border-collapse: collapse; */
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      caption {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+    </style>
+
+    <title>AgentTuning</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                AgentTuning: Enabling Generalized Agent Abilities For LLMs
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+                <span class="author-block">
+                  <sup>†</sup
+                  ><a href="mailto:zengaohan@gmail.com" target="_blank"
+                    >Aohan Zeng</a
+                  ><sup>*</sup>,</span
+                >
+                <span class="author-block">
+                  <sup>†</sup
+                  ><a
+                    href="mailto:liu-md20@mails.tsinghua.edu.cn"
+                    target="_blank"
+                    >Mingdao Liu</a
+                  ><sup>*</sup>,
+                  <span class="author-block">
+                    <sup>†</sup
+                    ><a
+                      href="mailto:lu-r21@mails.tsinghua.edu.cn"
+                      target="_blank"
+                      >Rui Lu</a
+                    ><sup>*</sup>,
+                  </span>
+                  <span class="author-block">
+                    <sup>†</sup
+                    ><a
+                      href="mailto:wangbw21@mails.tsinghua.edu.cn"
+                      target="_blank"
+                      >Bowen Wang</a
+                    >,
+                  </span>
+                  <span class="author-block">
+                    <sup>†</sup
+                    ><a
+                      href="mailto:liuxiao21@mails.tsinghua.edu.cn"
+                      target="_blank"
+                      >Xiao Liu</a
+                    >,
+                  </span>
+                  <span class="author-block">
+                    <sup>†</sup
+                    ><a
+                      href="mailto:yuxiaod@mail.tsinghua.edu.cn"
+                      target="_blank"
+                      >Yuxiao Dong</a
+                    >,
+                  </span>
+                  <span class="author-block">
+                    <sup>†</sup
+                    ><a
+                      href="mailto:jietang@mail.tsinghua.edu.cn"
+                      target="_blank"
+                      >Jie Tang</a
+                    >
+                  </span>
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <sup>†</sup>Tsinghua University
+                  <span class="eql-cntrb"
+                    ><small><br /><sup>*</sup>Equal contirubtion</small></span
+                  >
+                  <!--                             <br/><span class="author-block"><a href="mailto:yue.149@osu.edu">zengaohan@gmail.com</a>
+                      , <a href="mailto:wenhuchen@uwaterloo.ca">wenhuchen@uwaterloo.ca</a> </span> -->
+                </span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span>🤗 Model (AgentLM)</span>
+                    </a>
+                  </span>
+
+                  <!-- Supplementary PDF link -->
+                  <span class="link-block">
+                    <a
+                      href="static/pdfs/supplementary_material.pdf"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span>🤗 Dataset (AgentInstruct)</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/THUDM/AgentTuning"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/<ARXIV PAPER ID>"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Open large language models (LLMs) with great performance in
+                various tasks have significantly advanced the development of
+                LLMs. However, they are far inferior to commercial models such
+                as ChatGPT and GPT-4 when acting as agents to tackle complex
+                tasks in the real world. These agent tasks employ LLMs as the
+                central controller responsible for planning, memorization, and
+                tool utilization, necessitating both fine-grained prompting
+                methods and robust LLMs to achieve satisfactory performance.
+                Though many prompting methods have been proposed to complete
+                particular agent tasks, there is lack of research focusing on
+                improving the agent capabilities of LLMs themselves without
+                compromising their general abilities. In this work, we present
+                <b>AgentTuning</b>, a simple and general method to enhance the
+                agent abilities of LLMs while maintaining their general LLM
+                capabilities. We construct <b>AgentInstruct</b>, a lightweight
+                instruction-tuning dataset containing high-quality interaction
+                trajectories. We employ a hybrid instructiontuning strategy by
+                combining <b>AgentInstruct</b> with open-source instructions
+                from general domains. <b>AgentTuning</b> is used to
+                instruction-tune the Llama 2 series, resulting in
+                <b>AgentLM</b>. Our evaluations show that
+                <b>AgentTuning</b> enables LLMs’ agent capabilities without
+                compromising general abilities. The <b>AgentLM-70B</b> is
+                comparable to GPT-3.5-turbo on unseen agent tasks, demonstrating
+                generalized agent capabilities. We open source the
+                <b>AgentInstruct</b> dataset and <b>AgentLM-7B</b>,
+                <b>13B</b>, and <b>70B</b> models at
+                <a
+                  href="https://github.com/THUDM/AgentTuning"
+                  style="color: blue"
+                  >https://github.com/THUDM/AgentTuning</a
+                >, serving open and powerful alternatives to commercial LLMs for
+                agent tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
+    <!-- Image carousel -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop content">
+          <center>
+            <div class="column has-text-centered is-fifths-fifths">
+              <h2 class="title is-3">Overall Results</h2>
+            </div>
+            <div class="item">
+              <img
+                src="static/images/head-figure.png"
+                width="800"
+              />
+            </div>
+          </center>
+          <p>
+            <b>AgentTuning</b> represents the very first attempt to
+            instruction-tune LLMs using interaction trajectories across multiple
+            agent tasks. Evaluation results indicate that
+            <b>AgentTuning</b> enables the agent capabilities of LLMs with
+            robust generalization on unseen agent tasks while remaining good on
+            general language abilities. We have open-sourced the
+            <b>AgentInstruct</b>
+            dataset and <b>AgentLM</b>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero">
+      <div class="hero is-small">
+        <div class="container is-max-desktop content">
+          <div class="column has-text-centered is-fifths-fifths"></div>
+          <center>
+            <h2 class="title is-3">Method</h2>
+            <div class="item">
+              <img
+                src="static/images/main-figure.png"
+                alt="MY ALT TEXT"
+                width="800"
+              />
+            </div>
+          </center>
+          <p>
+            An overview of <b>AgentInstruct</b> and <b>AgentTuning</b>. The
+            construction of <b>AgentInstruct</b>, consisting of instruction
+            generation, trajectory interaction, and trajectory filter.
+            <b>AgentLM</b> is finetuned using a mixture of
+            <b>AgentInstruct</b> and general-domain instructions.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End image carousel -->
+
+    <!-- Youtube video -->
+    <!-- <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Video Presentation</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="publication-video">
+                <iframe
+                  src="https://www.youtube.com/embed/JkaxUblCGz0"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- End youtube video -->
+
+    <!-- Paper poster -->
+    <!-- <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Poster</h2>
+
+          <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        </div>
+      </div>
+    </section> -->
+    <!--End paper poster -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop content">
+          <div class="column has-text-centered is-fifths-fifths">
+            <h2 class="title is-3">Our Dataset: AgentInstruct</h2>
+          </div>
+          <br />
+          <!-- <center>
+            <div class="item">
+              <img
+                src="static/images/3-training-datasets.svg"
+                alt="MY ALT TEXT"
+                width="800"
+              />
+            </div>
+          </center> -->
+
+          <table>
+            <caption>
+              Overview of our
+              <b>AgentInstruct</b>
+              dataset which includes 1,866 trajectories from 6 agents tasks.
+            </caption>
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Inst. From</th>
+                <th># Inst.</th>
+                <th># Filt. Traj.</th>
+                <th>Avg # Filt. Traj. Turns</th>
+                <th>Ratio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AlfWorld</td>
+                <td>Train split</td>
+                <td>954</td>
+                <td>336</td>
+                <td>13.52</td>
+                <td>35.2%</td>
+              </tr>
+              <tr>
+                <td>WebShop</td>
+                <td>Train split</td>
+                <td>1,485</td>
+                <td>351</td>
+                <td>3.68</td>
+                <td>23.6%</td>
+              </tr>
+              <tr>
+                <td>Mind2Web</td>
+                <td>Train split</td>
+                <td>23,378</td>
+                <td>122</td>
+                <td>1.00</td>
+                <td>0.52%</td>
+              </tr>
+              <tr>
+                <td>Knowledge Graph</td>
+                <td>Train split</td>
+                <td>2,501</td>
+                <td>324</td>
+                <td>6.04</td>
+                <td>13.0%</td>
+              </tr>
+              <tr>
+                <td>Operating System</td>
+                <td>Self-Instruct</td>
+                <td>647</td>
+                <td>195</td>
+                <td>3.85</td>
+                <td>30.1%</td>
+              </tr>
+              <tr>
+                <td>Database</td>
+                <td>Self-Instruct</td>
+                <td>1,074</td>
+                <td>178</td>
+                <td>2.13</td>
+                <td>16.6%</td>
+              </tr>
+              <tr>
+                <td>AgentInstruct</td>
+                <td>-</td>
+                <td>12,643</td>
+                <td>1,866</td>
+                <td>5.24</td>
+                <td>5.29%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop content">
+          <div class="column has-text-centered is-fifths-fifths">
+            <h2 class="title is-3">Detailed Results</h2>
+          </div>
+          <br />
+          <!-- <center>
+            <div class="item">
+              <img
+                src="static/images/4-main-table.svg"
+                alt="MY ALT TEXT"
+                width="800"
+              />
+            </div>
+          </center> -->
+          <table>
+            <caption>
+              Main results of method. Model significantly outperforms Llama 2
+              across different scales, excelling in both held-in and held-out
+              tasks, without compromising its performance on general tasks.
+              Overall stands for score calculated from a weighted average of all
+              tasks within the same category.
+            </caption>
+            <thead>
+              <tr>
+                <th rowspan="2"><br />Type</th>
+                <th rowspan="2"><br />Task</th>
+                <th colspan="2">API-based</th>
+                <th colspan="3">Llama 2 (chat)</th>
+                <th colspan="3">AgentLM</th>
+              </tr>
+              <tr>
+                <th>GPT-3.5</th>
+                <th>GPT-4</th>
+                <th>7B</th>
+                <th>13B</th>
+                <th>70B</th>
+                <th>7B</th>
+                <th>13B</th>
+                <th>70B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="7"><br /><br /><br /><br /><br />Held-in Tasks</td>
+                <td>ALFWorld</td>
+                <td>14.0</td>
+                <td>78.0</td>
+                <td>2.0</td>
+                <td>2.0</td>
+                <td>6.0</td>
+                <td><u>84.0</u></td>
+                <td>76.0</td>
+                <td><b>86.0</b></td>
+              </tr>
+              <tr>
+                <td>WebShop</td>
+                <td><u>67.2</u></td>
+                <td>58.6</td>
+                <td>4.4</td>
+                <td>7.2</td>
+                <td>1.5</td>
+                <td>63.6</td>
+                <td><b>70.8</b></td>
+                <td>64.9</td>
+              </tr>
+              <tr>
+                <td>Mind2Web</td>
+                <td><u>15.7</u></td>
+                <td><b>22.6</b></td>
+                <td>3.7</td>
+                <td>2.3</td>
+                <td>0.2</td>
+                <td>6.4</td>
+                <td>8.4</td>
+                <td>13.5</td>
+              </tr>
+              <tr>
+                <td>KG</td>
+                <td>27.2</td>
+                <td><b>52.1</b></td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>18.1</td>
+                <td>26.8</td>
+                <td><u>47.0</u></td>
+              </tr>
+              <tr>
+                <td>OS</td>
+                <td><u>32.6</u></td>
+                <td><b>36.8</b></td>
+                <td>8.3</td>
+                <td>9.0</td>
+                <td>9.0</td>
+                <td>17.4</td>
+                <td>18.1</td>
+                <td>21.5</td>
+              </tr>
+              <tr>
+                <td>Database</td>
+                <td>15.0</td>
+                <td><u>33.7</u></td>
+                <td>0.3</td>
+                <td>1.3</td>
+                <td>9.3</td>
+                <td>30.6</td>
+                <td><u>33.7</u></td>
+                <td><b>37.7</b></td>
+              </tr>
+              <tr>
+                <td><b>Overall</b></td>
+                <td>1.59</td>
+                <td><b>2.75</b></td>
+                <td>0.19</td>
+                <td>0.20</td>
+                <td>0.27</td>
+                <td>1.96</td>
+                <td>2.11</td>
+                <td><u>2.55</u></td>
+              </tr>
+              <tr>
+                <td rowspan="7">
+                  <br /><br /><br /><br /><br /><br />Held-out Tasks
+                </td>
+                <td>SciWorld</td>
+                <td><u>21.2</u></td>
+                <td><b>36.4</b></td>
+                <td>5.9</td>
+                <td>6.4</td>
+                <td>7.9</td>
+                <td>13.7</td>
+                <td>18.0</td>
+                <td>20.8</td>
+              </tr>
+              <tr>
+                <td>MiniWoB++</td>
+                <td><u>66.7</u></td>
+                <td><b>69.4</b></td>
+                <td>0.0</td>
+                <td>19.6</td>
+                <td>0.7</td>
+                <td>28.9</td>
+                <td>31.1</td>
+                <td>60.7</td>
+              </tr>
+              <tr>
+                <td>WebArena</td>
+                <td><u>4.56</u></td>
+                <td><b>6.28</b></td>
+                <td>1.23</td>
+                <td>1.11</td>
+                <td>0.62</td>
+                <td>0.74</td>
+                <td>1.60</td>
+                <td>3.81</td>
+              </tr>
+              <tr>
+                <td>HotpotQA</td>
+                <td>37.4</td>
+                <td><b>52.1</b></td>
+                <td>22.6</td>
+                <td>25.2</td>
+                <td>37.5</td>
+                <td>22.3</td>
+                <td>29.6</td>
+                <td><u>41.6</u></td>
+              </tr>
+              <tr>
+                <td>ReWOO</td>
+                <td><u>71.0</u></td>
+                <td><b>79.7</b></td>
+                <td>48.3</td>
+                <td>48.7</td>
+                <td>55.1</td>
+                <td>50.9</td>
+                <td>55.7</td>
+                <td>66.0</td>
+              </tr>
+              <tr>
+                <td>DCG</td>
+                <td><u>24.5</u></td>
+                <td><b>50.0</b></td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>5.0</td>
+                <td>7.0</td>
+                <td>2.5</td>
+                <td>23.5</td>
+              </tr>
+              <tr>
+                <td><b>Overall</b></td>
+                <td><u>1.49</u></td>
+                <td><b>2.13</b></td>
+                <td>0.38</td>
+                <td>0.49</td>
+                <td>0.51</td>
+                <td>0.67<br />(+76%)</td>
+                <td>0.78<br />(+57%)</td>
+                <td>1.40<br />(+176%)</td>
+              </tr>
+              <tr>
+                <td rowspan="5" , style="border-bottom: 1px solid black">
+                  <br /><br /><br /><br />General Tasks
+                </td>
+                <td>MMLU</td>
+                <td><u>70.0</u></td>
+                <td><b>86.4</b></td>
+                <td>48.0</td>
+                <td>54.3</td>
+                <td>62.1</td>
+                <td>48.7</td>
+                <td>53.6</td>
+                <td>59.5</td>
+              </tr>
+              <tr>
+                <td>HumanEval</td>
+                <td><u>48.1</u></td>
+                <td><b>67.0</b></td>
+                <td>13.9</td>
+                <td>18.4</td>
+                <td>30.8</td>
+                <td>15.4</td>
+                <td>14.8</td>
+                <td>28.7</td>
+              </tr>
+              <tr>
+                <td>GSM8K</td>
+                <td>57.1</td>
+                <td><b>87.1</b></td>
+                <td>27.7</td>
+                <td>37.5</td>
+                <td>54.7</td>
+                <td>24.6</td>
+                <td>32.4</td>
+                <td><u>59.7</u></td>
+              </tr>
+              <tr>
+                <td>MT-Bench</td>
+                <td><u>7.94</u></td>
+                <td><b>8.99</b></td>
+                <td>6.26</td>
+                <td>6.65</td>
+                <td>6.85</td>
+                <td>6.34</td>
+                <td>6.57</td>
+                <td>7.26</td>
+              </tr>
+              <tr>
+                <td>Overall</td>
+                <td><u>1.15</u></td>
+                <td><b>1.53</b></td>
+                <td>0.63</td>
+                <td>0.74</td>
+                <td>0.95</td>
+                <td>0.63<br />(+0%)</td>
+                <td>0.69<br />(-7%)</td>
+                <td>0.96<br />(+1%)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop content">
+          <div class="column has-text-centered is-fifths-fifths">
+            <h2 class="title is-3">Error Analysis</h2>
+          </div>
+          <br />
+          <center>
+            <div class="item">
+              <img
+                src="static/images/error-analysis.svg"
+                alt="error-analysis"
+                width="600"
+              />
+            </div>
+          </center>
+          <br />
+          To delve into error analysis, we selected three tasks from the held-in
+          set (AlfWorld, WebShop, Knowledge Graph) and identified common error
+          types using a rule-based approach, such as invalid actions and
+          repeated generations. The results can be seen above.
+          <br /><br />
+          Overall, the original Llama2 exhibited more elementary mistakes like
+          repetition or taking invalid actions. In contrast, GPT-3.5 and
+          especially GPT-4 made fewer of such errors. However, the
+          <b>AgentLM</b>
+          noticeably reduced these basic errors. We speculate that while Llama 2
+          chat inherently possesses agent capabilities, its poor performance
+          might be due to a lack of aligned training on agent data; the
+          <b>AgentTuning</b> effectively activated its agent potential.
+        </div>
+      </div>
+    </section>
+    <section class="hero">
+      <div class="hero is-small">
+        <div class="container is-max-desktop content">
+          <div class="column has-text-centered is-fifths-fifths"></div>
+          <center>
+            <h2 class="title is-3">Case Study</h2>
+            <div class="item">
+              <img
+                src="static/images/case-study.svg"
+                width="800"
+              />
+            </div>
+          </center>
+          <p>A detailed analysis between two distinct tasks:</p>
+          <ul>
+            <li>
+              <strong>ALFWorld (Daily Household Routines)</strong>
+              <ul>
+                <li>
+                  <b>Llama2-70b-chat</b> repetitively checks an empty garbage
+                  can.
+                </li>
+                <li>
+                  <b>AgentLM</b> accurately places a soapbar in the can.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Knowledge Graph (Retrieve Entity from KG)</strong>
+              <ul>
+                <li>
+                  <b>Llama2-70b-chat</b> apologizes for not finding a function
+                  and gives an off-topic solution.
+                </li>
+                <li>
+                  <b>AgentLM</b> adeptly utilizes relevant data relations,
+                  seeking out the ISO settings for a specific camera model.
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            This suggests that <b>AgentTuning</b> significantly reduces the
+            occurrence of elementary errors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Reference</h2>
+        Please kindly cite our paper if you use our model, data, code or
+        results:
+        <br />
+        <br />
+        <pre><code>@misc{zeng2023agenttuning,
+      title={AgentTuning: Enabling Generalized Agent Abilities For LLMs
+      author={Aohan Zeng and Mingdao Liu and Rui Lu and Bowen Wang and Xiao Liu and Yuxiao Dong and Jie Tang},
+      year={2023},
+      eprint={TODO},
+      archivePrefix={arXiv},
+      primaryClass={TODO}
+}</code></pre>
+      </div>
+    </section>
+    <!--End BibTex citation -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a
+                  href="https://nerfies.github.io"
+                  target="_blank"
+                  >Nerfies</a
+                > project page. You are free to borrow the of this website, we
+                just ask that you link back to this page in the footer. <br />
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+  </body>
+</html>

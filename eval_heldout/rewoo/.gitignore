@@ -1,0 +1,8 @@
+./keys/
+.idea/
+__pycache__
+.vscode
+/keys
+/logs
+/results
+/data

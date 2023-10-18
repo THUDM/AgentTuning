@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  agent-llama-7b:
+    image: ghcr.io/huggingface/text-generation-inference:sha-4cce843
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - MAX_INPUT_LENGTH=4096
+      - MAX_TOTAL_TOKENS=16384
+      - DTYPE=bfloat16
+      - NUM_SHARD=1
+    volumes:
+      - ./tgi_data:/data
+    ports:
+      - "30007:80"
+    command:
+      - "--model-id"
+      - "THUDM/AgentTuning-7b"
+    deploy:
+      resources:
+        reservations:
+          memory: 8g
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]

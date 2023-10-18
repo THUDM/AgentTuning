@@ -1,0 +1,16 @@
+datasets==2.11.0
+geopy==2.3.0
+gradio==3.32.0
+langchain==0.0.187
+numpy==1.24.2
+openai==0.27.4
+pandas==1.5.2
+peft
+pytz
+requests==2.28.1
+tqdm==4.64.1
+wikipedia
+google-search-results
+
+accelerate
+fschat

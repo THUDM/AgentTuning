@@ -68,7 +68,7 @@ Here are details of our evaluation task, including 6 held-in tasks and 6 held-ou
 
 ### Held-in Tasks
 
-The 6 held-in tasks are selected from [**💻 AgentBench**](https://github.com/THUDM/AgentBench). All results are reported using the *Test* split in AgentBench.
+The 6 held-in tasks are selected from [**AgentBench**](https://github.com/THUDM/AgentBench).  However, since AgentBench is still under active development, the results from the latest branch might not fully reproduce the results reported in the paper. We are in the process of organizing the code for the paper's test version and will open-source it soon.
 
 ### Held-out Tasks
 

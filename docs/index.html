@@ -35,9 +35,7 @@
         width: 80%;
         border-collapse: collapse;
         font-family: Arial, sans-serif;
-        /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); */
         text-align: center;
-        /* border-collapse: collapse; */
         border-top: 1px solid black;
         border-bottom: 1px solid black;
       }
@@ -241,8 +239,8 @@
                 compromising general abilities. The <b>AgentLM-70B</b> is
                 comparable to GPT-3.5-turbo on unseen agent tasks, demonstrating
                 generalized agent capabilities. We open source the
-                <b>AgentInstruct</b> dataset and <b>AgentLM-7B</b>,
-                <b>13B</b>, and <b>70B</b> models at
+                <b>AgentInstruct</b> dataset and <b>AgentLM-7B</b>, <b>13B</b>,
+                and <b>70B</b> models at
                 <a
                   href="https://github.com/THUDM/AgentTuning"
                   style="color: blue"
@@ -265,10 +263,7 @@
               <h2 class="title is-3">Overall Results</h2>
             </div>
             <div class="item">
-              <img
-                src="static/images/head-figure.png"
-                width="800"
-              />
+              <img src="static/images/head-figure.png" width="800" />
             </div>
           </center>
           <p>
@@ -457,12 +452,19 @@
             </div>
           </center> -->
           <table>
-            <caption>
-              Main results of method. Model significantly outperforms Llama 2
-              across different scales, excelling in both held-in and held-out
-              tasks, without compromising its performance on general tasks.
-              Overall stands for score calculated from a weighted average of all
-              tasks within the same category.
+            <caption style="text-align: left">
+              Main results of
+              <b>AgentTuning</b
+              >. Model significantly outperforms Llama 2 across different
+              scales, excelling in both held-in and held-out tasks, without
+              compromising its performance on general tasks. Overall stands for
+              score calculated from a weighted average of all tasks within the
+              same category. (API-based models and open-source models are
+              compared separately.
+              <b>bold</b
+              >: the best in API-based models and open-source models;
+              <u>underline</u
+              >: the second best in open-source models)
             </caption>
             <thead>
               <tr>
@@ -488,7 +490,7 @@
                 <td rowspan="7"><br /><br /><br /><br /><br />Held-in Tasks</td>
                 <td>ALFWorld</td>
                 <td>14.0</td>
-                <td>78.0</td>
+                <td><b>78.0</b></td>
                 <td>2.0</td>
                 <td>2.0</td>
                 <td>6.0</td>
@@ -498,25 +500,25 @@
               </tr>
               <tr>
                 <td>WebShop</td>
-                <td><u>67.2</u></td>
+                <td><b>67.2</b></td>
                 <td>58.6</td>
                 <td>4.4</td>
                 <td>7.2</td>
                 <td>1.5</td>
                 <td>63.6</td>
                 <td><b>70.8</b></td>
-                <td>64.9</td>
+                <td><u>64.9</u></td>
               </tr>
               <tr>
                 <td>Mind2Web</td>
-                <td><u>15.7</u></td>
+                <td>15.7</td>
                 <td><b>22.6</b></td>
                 <td>3.7</td>
                 <td>2.3</td>
                 <td>0.2</td>
                 <td>6.4</td>
-                <td>8.4</td>
-                <td>13.5</td>
+                <td><u>8.4</u></td>
+                <td><b>13.5</b></td>
               </tr>
               <tr>
                 <td>KG</td>
@@ -526,24 +528,24 @@
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>18.1</td>
-                <td>26.8</td>
-                <td><u>47.0</u></td>
+                <td><u>26.8</u></td>
+                <td><b>47.0</b></td>
               </tr>
               <tr>
                 <td>OS</td>
-                <td><u>32.6</u></td>
+                <td>32.6</td>
                 <td><b>36.8</b></td>
                 <td>8.3</td>
                 <td>9.0</td>
                 <td>9.0</td>
                 <td>17.4</td>
-                <td>18.1</td>
-                <td>21.5</td>
+                <td><u>18.1</u></td>
+                <td><b>21.5</b></td>
               </tr>
               <tr>
                 <td>Database</td>
                 <td>15.0</td>
-                <td><u>33.7</u></td>
+                <td><b>33.7</b></td>
                 <td>0.3</td>
                 <td>1.3</td>
                 <td>9.3</td>
@@ -559,44 +561,44 @@
                 <td>0.20</td>
                 <td>0.27</td>
                 <td>1.96</td>
-                <td>2.11</td>
-                <td><u>2.55</u></td>
+                <td><u>2.11</u></td>
+                <td><b>2.55</b></td>
               </tr>
               <tr>
                 <td rowspan="7">
                   <br /><br /><br /><br /><br /><br />Held-out Tasks
                 </td>
                 <td>SciWorld</td>
-                <td><u>21.2</u></td>
+                <td>21.2</td>
                 <td><b>36.4</b></td>
                 <td>5.9</td>
                 <td>6.4</td>
                 <td>7.9</td>
                 <td>13.7</td>
-                <td>18.0</td>
-                <td>20.8</td>
+                <td><u>18.0</u></td>
+                <td><b>20.8</b></td>
               </tr>
               <tr>
                 <td>MiniWoB++</td>
-                <td><u>66.7</u></td>
+                <td>66.7</td>
                 <td><b>69.4</b></td>
                 <td>0.0</td>
                 <td>19.6</td>
                 <td>0.7</td>
                 <td>28.9</td>
-                <td>31.1</td>
-                <td>60.7</td>
+                <td><u>31.1</u></td>
+                <td><b>60.7</b></td>
               </tr>
               <tr>
                 <td>WebArena</td>
-                <td><u>4.56</u></td>
+                <td>4.56</td>
                 <td><b>6.28</b></td>
                 <td>1.23</td>
                 <td>1.11</td>
                 <td>0.62</td>
                 <td>0.74</td>
-                <td>1.60</td>
-                <td>3.81</td>
+                <td><u>1.60</u></td>
+                <td><b>3.81</b></td>
               </tr>
               <tr>
                 <td>HotpotQA</td>
@@ -604,68 +606,72 @@
                 <td><b>52.1</b></td>
                 <td>22.6</td>
                 <td>25.2</td>
-                <td>37.5</td>
+                <td><u>37.5</u></td>
                 <td>22.3</td>
                 <td>29.6</td>
-                <td><u>41.6</u></td>
+                <td><b>41.6</b></td>
               </tr>
               <tr>
                 <td>ReWOO</td>
-                <td><u>71.0</u></td>
+                <td>71.0</td>
                 <td><b>79.7</b></td>
                 <td>48.3</td>
                 <td>48.7</td>
                 <td>55.1</td>
                 <td>50.9</td>
-                <td>55.7</td>
-                <td>66.0</td>
+                <td><u>55.7</u></td>
+                <td><b>66.0</b></td>
               </tr>
               <tr>
                 <td>DCG</td>
-                <td><u>24.5</u></td>
+                <td>24.5</td>
                 <td><b>50.0</b></td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>5.0</td>
-                <td>7.0</td>
+                <td><u>7.0</u></td>
                 <td>2.5</td>
-                <td>23.5</td>
+                <td><b>23.5</b></td>
               </tr>
               <tr>
                 <td><b>Overall</b></td>
-                <td><u>1.49</u></td>
+                <td>1.49</td>
                 <td><b>2.13</b></td>
                 <td>0.38</td>
                 <td>0.49</td>
                 <td>0.51</td>
-                <td>0.67<br />(+76%)</td>
-                <td>0.78<br />(+57%)</td>
-                <td>1.40<br />(+176%)</td>
+                <td>0.67<br /><span style="color: brown">(+76%)</span></td>
+                <td>
+                  <u>0.78</u><br /><span style="color: brown">(+57%)</span>
+                </td>
+                <td>
+                  <b>1.40</b><br /><span style="color: brown">(+176%)</span>
+                </td>
               </tr>
               <tr>
                 <td rowspan="5" , style="border-bottom: 1px solid black">
                   <br /><br /><br /><br />General Tasks
                 </td>
                 <td>MMLU</td>
-                <td><u>70.0</u></td>
+                <td>70.0</td>
                 <td><b>86.4</b></td>
                 <td>48.0</td>
                 <td>54.3</td>
-                <td>62.1</td>
+                <td><b>62.1</b></td>
                 <td>48.7</td>
                 <td>53.6</td>
-                <td>59.5</td>
+                <td><u>59.5</u></td>
               </tr>
               <tr>
                 <td>HumanEval</td>
-                <td><u>48.1</u></td>
+                <td>48.1</td>
                 <td><b>67.0</b></td>
                 <td>13.9</td>
                 <td>18.4</td>
-                <td>30.8</td>
+                <td><b>30.8</b></td>
                 <td>15.4</td>
                 <td>14.8</td>
-                <td>28.7</td>
+                <td><u>28.7</u></td>
               </tr>
               <tr>
                 <td>GSM8K</td>
@@ -673,32 +679,32 @@
                 <td><b>87.1</b></td>
                 <td>27.7</td>
                 <td>37.5</td>
-                <td>54.7</td>
+                <td><u>54.7</u></td>
                 <td>24.6</td>
                 <td>32.4</td>
-                <td><u>59.7</u></td>
+                <td><b>59.7</b></td>
               </tr>
               <tr>
                 <td>MT-Bench</td>
-                <td><u>7.94</u></td>
+                <td>7.94</td>
                 <td><b>8.99</b></td>
                 <td>6.26</td>
                 <td>6.65</td>
-                <td>6.85</td>
-                <td>6.34</td>
+                <td><u>6.85</u></td>
+                <td>6.11</td>
                 <td>6.57</td>
-                <td>7.26</td>
+                <td><b>7.26</b></td>
               </tr>
               <tr>
                 <td>Overall</td>
-                <td><u>1.15</u></td>
+                <td>1.15</td>
                 <td><b>1.53</b></td>
                 <td>0.63</td>
                 <td>0.74</td>
-                <td>0.95</td>
-                <td>0.63<br />(+0%)</td>
+                <td><u>0.95</u></td>
+                <td>0.62<br />(-1%)</td>
                 <td>0.69<br />(-7%)</td>
-                <td>0.96<br />(+1%)</td>
+                <td><b>0.96</b><br />(+1%)</td>
               </tr>
             </tbody>
           </table>
@@ -745,10 +751,7 @@
           <center>
             <h2 class="title is-3">Case Study</h2>
             <div class="item">
-              <img
-                src="static/images/case-study.svg"
-                width="800"
-              />
+              <img src="static/images/case-study.svg" width="800" />
             </div>
           </center>
           <p>A detailed analysis between two distinct tasks:</p>
@@ -760,9 +763,7 @@
                   <b>Llama2-70b-chat</b> repetitively checks an empty garbage
                   can.
                 </li>
-                <li>
-                  <b>AgentLM</b> accurately places a soapbar in the can.
-                </li>
+                <li><b>AgentLM</b> accurately places a soapbar in the can.</li>
               </ul>
             </li>
             <li>
@@ -786,7 +787,6 @@
         </div>
       </div>
     </section>
-
 
     <!--BibTex citation -->
     <section class="section" id="BibTeX">

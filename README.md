@@ -3,14 +3,13 @@
 <p align="center">
 🤗 <a href="https://huggingface.co/THUDM/agentlm-70b" target="_blank">Model (AgentLM-70B)</a> • 🤗 <a href="https://huggingface.co/datasets/THUDM/AgentInstruct" target="_blank">Dataset (AgentInstruct)</a> • 📃 <a href="https://arxiv.org/abs/TODO" target="_blank">Paper</a> • 🌐 <a href="" target="_blank">Project Page</a> <br>
 </p>
-
-<center><img src="assets/main-figure.png" alt="main-figure" style="zoom:50%;" /></center>
+<center><img src="assets/main-figure.svg" alt="main-figure" style="zoom:50%;" /></center>
 
 **AgentTuning** represents the very first attempt to instruction-tune LLMs using interaction trajectories across multiple agent tasks. Evaluation results indicate that AgentTuning enables the agent capabilities of LLMs with robust generalization on unseen agent tasks while remaining good on general language abilities. We have open-sourced the AgentInstruct dataset and AgentLM.
 
 ## Main Result
 
-<center><img src="assets/head-figure.png" alt="head-figure" width="1500" /></center>
+<center><img src="assets/head-figure.svg" alt="head-figure" width="1500" /></center>
 
 <center><b>Figure 1</b>&nbsp;&nbsp;Overall score in our held-in and held-out tasks</center>
 

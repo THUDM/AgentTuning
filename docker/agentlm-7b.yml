@@ -15,7 +15,7 @@ services:
       - "30007:80"
     command:
       - "--model-id"
-      - "THUDM/AgentTuning-7b"
+      - "THUDM/agentlm-7b"
     deploy:
       resources:
         reservations:

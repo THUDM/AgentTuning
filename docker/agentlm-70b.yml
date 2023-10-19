@@ -4,7 +4,7 @@ services:
   agent-llama-70b:
     image: ghcr.io/huggingface/text-generation-inference:sha-4cce843
     environment:
-      - CUDA_VISIBLE_DEVICES=1,2,3,4
+      - CUDA_VISIBLE_DEVICES=0,1,2,3
       - MAX_INPUT_LENGTH=4096
       - MAX_TOTAL_TOKENS=16384
       - DTYPE=bfloat16
@@ -15,7 +15,7 @@ services:
       - "30070:80"
     command:
       - "--model-id"
-      - "THUDM/AgentTuning-70b"
+      - "THUDM/agentlm-70b"
     deploy:
       resources:
         reservations:

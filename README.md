@@ -1,7 +1,7 @@
 # AgentTuning: Enabling Generalized Agent Abilities For LLMs
 
 <p align="center">
-🤗 <a href="https://huggingface.co/THUDM/agentlm-70b" target="_blank">Model (AgentLM-70B)</a> • 🤗 <a href="https://huggingface.co/datasets/THUDM/AgentInstruct" target="_blank">Dataset (AgentInstruct)</a> • 📃 <a href="https://arxiv.org/abs/2310.12823" target="_blank">Paper</a> • 🌐 <a href="https://thudm.github.io/agenttuning" target="_blank">Project Page</a> <br>
+🤗 <a href="https://huggingface.co/THUDM/agentlm-70b" target="_blank">Model (AgentLM-70B)</a> • 🤗 <a href="https://huggingface.co/datasets/THUDM/AgentInstruct" target="_blank">Dataset (AgentInstruct)</a> • 📃 <a href="https://arxiv.org/abs/2310.12823" target="_blank">Paper</a> • 🌐 <a href="https://thudm.github.io/AgentTuning/" target="_blank">Project Page</a> <br>
 </p>
 <center><img src="assets/main-figure.svg" alt="main-figure" style="zoom:50%;" /></center>
 

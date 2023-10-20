@@ -129,3 +129,18 @@ Held-out tasks are recompiled from the following frameworks:
   cd FastChat/fastchat/llm_judge
   OPENAI_API_KEY=<your-api-key> python gen_judgment.py --model-list agentlm-70b --parallel <number-of-cuncurrent-requests>
   ```
+
+## Citation
+
+If you find our work useful, please consider citing AgentTuning:
+
+```
+@misc{zeng2023agenttuning,
+      title={AgentTuning: Enabling Generalized Agent Abilities for LLMs}, 
+      author={Aohan Zeng and Mingdao Liu and Rui Lu and Bowen Wang and Xiao Liu and Yuxiao Dong and Jie Tang},
+      year={2023},
+      eprint={2310.12823},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```

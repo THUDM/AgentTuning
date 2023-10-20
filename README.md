@@ -5,6 +5,8 @@
 </p>
 <center><img src="assets/main-figure.svg" alt="main-figure" style="zoom:50%;" /></center>
 
+[中文版(Chinese)](./README-zh.md)
+
 **AgentTuning** represents the very first attempt to instruction-tune LLMs using interaction trajectories across multiple agent tasks. Evaluation results indicate that AgentTuning enables the agent capabilities of LLMs with robust generalization on unseen agent tasks while remaining good on general language abilities. We have open-sourced the AgentInstruct dataset and AgentLM.
 
 ## Main Result
@@ -68,7 +70,7 @@ Here are details of our evaluation task, including 6 held-in tasks and 6 held-ou
 
 ### Held-in Tasks
 
-The 6 held-in tasks are selected from [**AgentBench**](https://github.com/THUDM/AgentBench).  However, since AgentBench is still under active development, the results from the latest branch might not fully reproduce the results reported in the paper. We are in the process of organizing the code for the paper's test version and will open-source it soon.
+The 6 held-in tasks are selected from [**AgentBench**](https://github.com/THUDM/AgentBench).  However, since AgentBench is still under active development, the results from the latest branch might not fully reproduce the results reported in the paper. The evaluation code of this project is located in `./AgentBench.old`.
 
 ### Held-out Tasks
 

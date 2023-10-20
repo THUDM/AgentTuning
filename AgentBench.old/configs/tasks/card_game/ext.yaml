@@ -1,0 +1,6 @@
+module: "src.tasks.CardGame"
+
+parameters:
+    name: "CardGame"
+    port: 12349
+    test_time: 50

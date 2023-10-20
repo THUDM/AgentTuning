@@ -1,0 +1,6 @@
+module: "src.tasks.KnowledgeGraph"
+parameters:
+    name: "KnowledgeGraph-std"
+    round: 15
+    data_file: "data/knowledgegraph/std.json"
+    sparql_url: "http://164.107.116.56:3093/sparql"

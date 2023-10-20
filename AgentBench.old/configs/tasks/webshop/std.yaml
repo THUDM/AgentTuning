@@ -1,0 +1,8 @@
+module: src.tasks.WebShop
+
+parameters:
+  name: "WebShop"
+  start: 0
+  end: 200
+  num_envs: 3
+  worker_limit: 3

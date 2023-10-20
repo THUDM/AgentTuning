@@ -1,0 +1,10 @@
+module: "src.agents.TGIAgent"
+parameters:
+    ip: "http://127.0.0.1"
+    # Also you can set up the AgentLM on many address
+    # The TGIAgent will automatically balance the load
+    # address ∈ [address_from, address_to)
+    address_from: 30013
+    address_to: 30014
+    model_name: "AgentLM-13b"
+    max_tokens: 4096

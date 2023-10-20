@@ -764,35 +764,7 @@
             </div>
           </center>
           <br />
-          <p>A detailed analysis between two distinct tasks:</p>
-          <ul>
-            <li>
-              <strong>ALFWorld (Daily Household Routines)</strong>
-              <ul>
-                <li>
-                  <b>Llama2-70b-chat</b> repetitively checks an empty garbage
-                  can.
-                </li>
-                <li><b>AgentLM</b> accurately places a soapbar in the can.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Knowledge Graph (Retrieve Entity from KG)</strong>
-              <ul>
-                <li>
-                  <b>Llama2-70b-chat</b> apologizes for not finding a function
-                  and gives an off-topic solution.
-                </li>
-                <li>
-                  <b>AgentLM</b> adeptly utilizes relevant data relations,
-                  seeking out the ISO settings for a specific camera model.
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <p>
-            This suggests that <b>AgentTuning</b> significantly reduces the
-            occurrence of elementary errors.
+          <p>Comparison case study on ALFWorld and Knowledge Graph between Llama-2-70b-chat and AgentLM-70B. (a) For the ALFWorld task, Llama-2-70b-chat repeated the same action ultimately failing to complete the task, while Agent-70B adjusted its actions after a failure. (b) For the Knowledge Graph task, Llama-2-70b-chat refused to fix the function call and instead demanded the user to implement the function upon encountering a error. In contrast, AgentLM-70B provided the correct function call.
           </p>
         </div>
       </div>
@@ -807,12 +779,12 @@
         <br />
         <br />
         <pre><code>@misc{zeng2023agenttuning,
-      title={AgentTuning: Enabling Generalized Agent Abilities For LLMs
+      title={AgentTuning: Enabling Generalized Agent Abilities for LLMs}, 
       author={Aohan Zeng and Mingdao Liu and Rui Lu and Bowen Wang and Xiao Liu and Yuxiao Dong and Jie Tang},
       year={2023},
-      eprint={TODO},
+      eprint={2310.12823},
       archivePrefix={arXiv},
-      primaryClass={TODO}
+      primaryClass={cs.CL}
 }</code></pre>
       </div>
     </section>

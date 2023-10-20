@@ -1,6 +1,16 @@
 # Readme
 
+[中文版(Chinese)](./readme-zh.md)
+
 ## set-up
+
+Verify that you have installed docker and can run docker commands without sudo.
+
+```bash
+docker --version
+docker image list
+docker ps
+```
 
 ### Docker-based tasks
 
@@ -17,21 +27,13 @@ docker pull learningrate/agentbench-card_game
 
 ### Other tasks
 
-First install the requirements
+First install the global requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
 **For OSInteraction task**
-
-Verify that you have installed docker and can run docker commands without sudo.
-
-```bash
-docker --version
-docker image list
-docker ps
-```
 
 Install requirements and create local images (5 ~ 10 minutes)
 
@@ -54,8 +56,7 @@ python evaluate.py \
 Install docker and prepare `mysql` image, and make sure you have already installed global requirements.
 
 ```bash
-cd src/tasks/dbbench
-pip install -r requirements.txt
+pip install -r src/tasks/dbbench/requirements.txt
 ```
 
 Run the following command to test DB task (To avoid docker problem, we do not recommend run with too many workers)
@@ -88,7 +89,7 @@ python evaluate.py \
 
 ## TGI config
 
-After setting up TGI, add port(s) in `/configs/agents/tgi_clients/AgentLM-7b/13b/70b.yaml`, for faster evaluation, you can add ports in the docker compose file.
+When setting up TGI, you can add more port(s) in `/configs/agents/tgi_clients/AgentLM-{7b,13b,70b}.yaml` for faster evaluation.
 
 ## Evaluation
 
@@ -100,4 +101,4 @@ bash eval/AgentLM-13b-eval-all.sh
 bash eval/AgentLM-70b-eval-all.sh
 ```
 
-After evaluation, result of each task will be stored in `outputs/AgentLM-{7b,13b,70b}/{timestamp}/{task}/results.json`. 
+After evaluation, result of each task will be stored in `outputs/AgentLM-{7b,13b,70b}/{timestamp}/{task}/results.json`.

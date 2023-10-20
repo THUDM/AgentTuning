@@ -76,14 +76,14 @@ The 6 held-in tasks are selected from [**AgentBench**](https://github.com/THUDM/
 
 Held-out tasks are recompiled from the following frameworks:
 
-| Task              | AgentTuning Setup                                                             | Original Repo                                                                                  |
-| ----------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| SciWorld          | [📂 eval_heldout/science-world](eval_heldout/science-world/)                  | [💻 allenai/ScienceWorld](https://github.com/allenai/ScienceWorld)                             |
-| MiniWoB++         | [📂 eval_heldout/miniwob++](eval_heldout/miniwob++)                           | [💻 Farama-Foundation/miniwob-plusplus](https://github.com/Farama-Foundation/miniwob-plusplus) |
-| HotpotQA          | [📂 eval_heldout/hotpotQA](eval/held_out/hotpotQA)                            | [💻 salesforce/BOLAA](https://github.com/salesforce/BOLAA)                                     |
-| ReWOO             | [📂 eval_heldout/rewoo](eval_heldout/rewwo/)                                  | [💻 billxbf/ReWOO](https://github.com/billxbf/ReWOO)                                           |
-| WebArena          | [📂 eval_heldout/webarena](eval_heldout/webarena/)                            | [💻 web-arena-x/webarena](https://github.com/web-arena-x/webarena)                             |
-| Digital Card Game | [💻 THUDM/AgentBench](https://github.com/THUDM/AgentBench) ( _Extend_ Split ) | [💻 THUDM/AgentBench](https://github.com/THUDM/AgentBench)                                     |
+| Task              | AgentTuning Setup                                           | Original Repo                                                |
+| ----------------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| SciWorld          | [📂 eval_heldout/science-world](eval_heldout/science-world/) | [💻 allenai/ScienceWorld](https://github.com/allenai/ScienceWorld) |
+| MiniWoB++         | [📂 eval_heldout/miniwob++](eval_heldout/miniwob++)          | [💻 Farama-Foundation/miniwob-plusplus](https://github.com/Farama-Foundation/miniwob-plusplus) |
+| HotpotQA          | [📂 eval_heldout/hotpotQA](eval/held_out/hotpotQA)           | [💻 salesforce/BOLAA](https://github.com/salesforce/BOLAA)    |
+| ReWOO             | [📂 eval_heldout/rewoo](eval_heldout/rewwo/)                 | [💻 billxbf/ReWOO](https://github.com/billxbf/ReWOO)          |
+| WebArena          | [📂 eval_heldout/webarena](eval_heldout/webarena/)           | [💻 web-arena-x/webarena](https://github.com/web-arena-x/webarena) |
+| Digital Card Game | [💻 AgentBench.old](./AgentBench.old) ( _Extend_ Split )     | [💻 THUDM/AgentBench](https://github.com/THUDM/AgentBench)    |
 
 ### General Tasks
 

@@ -132,7 +132,7 @@ Held-out tasks are recompiled from the following frameworks:
   python eval_general/eval_mt_bench_tgi.py --host 127.0.0.1 --port 30070 --model-id agentlm-70b
   ```
 
-- Evalutate the answers with GPT-4
+- Evaluate the answers with GPT-4
   ```bash
   cd FastChat/fastchat/llm_judge
   OPENAI_API_KEY=<your-api-key> python gen_judgment.py --model-list agentlm-70b --parallel <number-of-cuncurrent-requests>

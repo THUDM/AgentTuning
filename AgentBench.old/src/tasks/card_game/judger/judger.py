@@ -531,7 +531,7 @@ class std_thread(threading.Thread):
             print('     when you use this command(4), \
                 you need to make sure all AIs are started and the index is sorted from 0')
             print('     after using this command(4) successfully, \
-                you cannot use the instrution set until your game is over')
+                you cannot use the instruction set until your game is over')
             print('     example:4 logic.py my_config replay.json')
             print('  5:quit all of the processes and threads')
             print("    if you don't use command(4) to start a game, \
@@ -558,7 +558,7 @@ class std_thread(threading.Thread):
                 assert opt_list[0] >= 0
                 assert opt_list[0] <= 5
             except:
-                print('Your instrution is wrong, please check your input')
+                print('Your instruction is wrong, please check your input')
             else:
                 if opt_list[0] == 0:
                     try:
@@ -568,7 +568,7 @@ class std_thread(threading.Thread):
                         assert index >= 0
                         assert index < 100
                     except:
-                        print('Your instrution is wrong, please check your input')
+                        print('Your instruction is wrong, please check your input')
                     else:
                         if len(self.player_thread_list) > index and self.player_thread_list[index] is not None:
                             print('You have started a process numbered %d'%(index))
@@ -589,7 +589,7 @@ class std_thread(threading.Thread):
                         assert index >= 0
                         assert index < 100
                     except:
-                        print('Your instrution is wrong, please check your input')
+                        print('Your instruction is wrong, please check your input')
                     else:
                         if len(self.player_thread_list) > index and self.player_thread_list[index] is not None:
                             print('You have started a process numbered %d'%(index))
@@ -602,7 +602,7 @@ class std_thread(threading.Thread):
                         assert index >= 0
                         assert index < 100
                     except:
-                        print('Your instrution is wrong, please check your input')
+                        print('Your instruction is wrong, please check your input')
                     else:
                         if len(self.player_thread_list) <= index:
                             print('cannot find an process numbered %d'%(index))
@@ -618,7 +618,7 @@ class std_thread(threading.Thread):
                         assert index >= 0
                         assert index < 100
                     except:
-                        print('Your instrution is wrong, please check your input')
+                        print('Your instruction is wrong, please check your input')
                     else:
                         if len(self.player_thread_list) <= index:
                             print('cannot find an process numbered %d'%(index))
@@ -634,7 +634,7 @@ class std_thread(threading.Thread):
                         replay = opt_list[3]
                         assert len(opt_list) == 4
                     except:
-                        print('Your instrution is wrong, please check your input')
+                        print('Your instruction is wrong, please check your input')
                     else:
                         while self.player_thread_list and\
                             self.player_thread_list[len(self.player_thread_list)-1] is None:
@@ -665,7 +665,7 @@ class std_thread(threading.Thread):
         '''
         启动交互模式
         '''
-        print('You can input help to know the instrution set')
+        print('You can input help to know the instruction set')
         print('> ', end="", flush=True)
         while True:
             opt_str = input()

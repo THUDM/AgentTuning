@@ -51,7 +51,7 @@ cd docker
 docker compose -f agentlm-70b.yml up
 ```
 
-Upon successful execution, a client will be available on port `30070`. Here an example of launching a request:
+Upon successful execution, a client will be available on port `30070`. Here is an example of launching a request:
 
 ```bash
 curl 127.0.0.1:30070/generate \

@@ -1,3 +1,4 @@
+# Import necessary modules and libraries
 from typing import List
 import os
 import json
@@ -10,30 +11,33 @@ import datetime
 import argparse
 import requests
 
-# from dataclass_wizard import YAMLWizard
-from dataclasses import dataclass, field
-from enum import Enum
-from typing import Optional, List, Dict, Callable
-
-
+# Define a custom exception for sessions
 class SessionExeption(Exception):
     pass
 
+# Define a class for managing conversation sessions
 class Session:
     def __init__(self, model_inference, history=None) -> None:
+        # Initialize the session with a history of messages or an empty list
         self.history: list[dict] = history or []
         self.exception_raised = False
+        # Wrap the model inference function for error handling
         self.model_inference = self.wrap_inference(model_inference)
 
+    # Add a message to the conversation history
     def inject(self, message: dict) -> None:
+        # Ensure the message is in the expected format
         assert isinstance(message, dict)
         assert "role" in message and "content" in message
         assert isinstance(message["role"], str)
         assert isinstance(message["content"], str)
         assert message["role"] in ["user", "agent"]
+        # Append the message to the conversation history
         self.history.append(message)
 
+    # Generate a response based on the conversation history
     def action(self, extend_messages: List[dict] = None) -> str:
+        # If extend_messages is provided, add those messages to the history
         extend = []
         if extend_messages:
             if isinstance(extend_messages, list):
@@ -42,11 +46,13 @@ class Session:
                 extend.append(extend_messages)
             else:
                 raise Exception("Invalid extend_messages")
+        # Get the model's response based on the conversation history
         result = self.model_inference(self.history + extend)
         self.history.extend(extend)
         self.history.append({"role": "agent", "content": result})
         return result
     
+    # Calculate the number of segments in a message
     def _calc_segments(self, msg: str):
         segments = 0
         current_segment = ""
@@ -74,6 +80,7 @@ class Session:
 
         return segments
     
+    # Wrap the model inference function for error handling
     def wrap_inference(self, inference_function: Callable[[List[dict]], str]) -> Callable[[List[dict]], str]:
         def _func(history: List[dict]) -> str:
             if self.exception_raised:
@@ -91,6 +98,7 @@ class Session:
             return result
         return _func
 
+    # Filter and process messages in the conversation history
     def filter_messages(self, messages: List[Dict]) -> List[Dict]:
         try:
             assert len(messages) % 2 == 1
@@ -108,7 +116,7 @@ class Session:
             raise SessionExeption("Invalid messages")
         threashold_segments = 3500
         return_messages = []
-        # only include the latest {threashold_segments} segments
+        # Only include the latest {threashold_segments} segments
         
         segments = self._calc_segments(messages[0]["content"])
         
@@ -136,19 +144,22 @@ class Session:
         
         return_messages.reverse()
         return return_messages
-        
-            
 
+# Define a base class for conversational agents
 class Agent:
     def __init__(self, **configs) -> None:
         self.name = configs.pop("name", None)
         self.src = configs.pop("src", None)
+        # For any remaining config keys, print a warning
         # for key in configs:
         #     print(f"Warning: Unknown argument '{key}' for the agent.")
         pass
 
+    # Create a new conversation session
     def create_session(self) -> Session:
         return Session(self.inference)
 
+    # Define the model's inference function (to be implemented by subclasses)
     def inference(self, history: List[dict]) -> str:
         raise NotImplementedError
+

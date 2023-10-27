@@ -30,7 +30,7 @@ AgentInstruct dataset is available on [🤗Huggingface Repo](https://huggingface
 
 **AgentLM** models are produced by mixed training on AgentInstruct dataset and ShareGPT dataset from Llama2-chat series.
 
-The models follow the conversation format of [Llama-2-chat](https://huggingface.co/blog/llama2#how-to-prompt-llama-2), with system prompt fixed as `You are a helpful, respectful and honest assistant.`
+The models follow the conversation format of [Llama-2-chat](https://huggingface.co/blog/llama2#how-to-prompt-llama-2), with the system prompt fixed as `You are a helpful, respectful and honest assistant.`
 
 The 7B, 13B, and 70B models are available on Huggingface model hub.
 
@@ -62,7 +62,7 @@ curl 127.0.0.1:30070/generate \
 # {"generated_text":"Hello! How can I help you today? "}
 ```
 
-You may replicate the services in docker compose file to multiple inference instance if more GPUs are available.
+You may replicate the services in docker compose file to multiple inference instances if more GPUs are available.
 
 ## Evaluation
 

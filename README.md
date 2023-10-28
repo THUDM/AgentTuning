@@ -7,7 +7,7 @@
 
 [中文版(Chinese)](./README-zh.md)
 
-**AgentTuning** represents the very first attempt to instruction-tune LLMs using interaction trajectories across multiple agent tasks. Evaluation results indicate that AgentTuning enables the agent capabilities of LLMs with robust generalization on unseen agent tasks while remaining good on general language abilities. We have open-sourced the AgentInstruct dataset and AgentLM.
+**AgentTuning** represents the very first attempt to instruction-tune LLMs using interaction trajectories across multiple agent tasks. Evaluation results indicate that AgentTuning enables the agent capabilities of LLMs with robust generalization on unseen agent tasks while remaining strong in general language abilities. We have open-sourced the AgentInstruct dataset and AgentLM.
 
 ## Main Result
 
@@ -17,10 +17,10 @@
 
 ## AgentInstruct
 
-**AgentInstruct** is a meticulously curated dataset featuring **1,866** high-quality interactions, designed to enhance AI agents across 6 diverse real-world tasks.
+**AgentInstruct** is a meticulously curated dataset featuring 1,866 high-quality interactions designed to enhance AI agents across 6 diverse real-world tasks.
 
-- 🔍 **CoT** - Harness the power of [ReAct](http://arxiv.org/abs/2210.03629), offering detailed thought explanations for each action, ensuring an intricate understanding of the model's decision-making journey.
-- 🌍 **Diversity** - Spanning 6 real-world scenarios, from Daily Household Routines to Database Operations, and their average turns range from 5 to 35.
+- 🔍 **CoT** - Harness the power of  [ReAct](http://arxiv.org/abs/2210.03629), offering detailed thought explanations for each action, ensuring an intricate understanding of the model's decision-making journey.
+- 🌍 **Diversity** - Spanning 6 real-world scenarios, from Daily Household Routines to Database Operations, with an average turn range from 5 to 35.
 - 🎯 **Precision** - Not all trajectories of GPT-4 are effective! Ours are rigorously filtered using strict rewards to ensure top-notch quality.
 - ✅ **Assurance** - Rigorous checks to avoid data leakage, ensuring pristine dataset quality.
 
@@ -62,7 +62,7 @@ curl 127.0.0.1:30070/generate \
 # {"generated_text":"Hello! How can I help you today? "}
 ```
 
-You may replicate the services in docker compose file to multiple inference instances if more GPUs are available.
+You can replicate the services in the Docker Compose file to create multiple inference instances if more GPUs are available.
 
 ## Evaluation
 
@@ -70,7 +70,7 @@ Here are details of our evaluation task, including 6 held-in tasks and 6 held-ou
 
 ### Held-in Tasks
 
-The 6 held-in tasks are selected from [**AgentBench**](https://github.com/THUDM/AgentBench). However, since AgentBench is still under active development, the results from the latest branch might not fully reproduce the results reported in the paper. The evaluation code of this project is located in `./AgentBench.old`.
+The 6 held-in tasks are selected from [**AgentBench**](https://github.com/THUDM/AgentBench). However, since AgentBench is still under active development, the results from the latest branch might not fully reproduce the results reported in the paper. The evaluation code of this project is located in ./AgentBench.old.
 
 ### Held-out Tasks
 

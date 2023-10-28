@@ -21,7 +21,7 @@ plan:
 2. type Maple
 3. clickxpath //*[@id="search"]
 4. clickxpath //*[@id="pagination"]/li[4]/a // First, move to the corresponding result page. You need to move to the second page where the 6th result is located
-5. clickxpath //*[@id="page-content"]/div[3]/a // Each page contains three results and 6-3=3. Click the thrid result to select 6th result by clicking the first a tag.
+5. clickxpath //*[@id="page-content"]/div[3]/a // Each page contains three results and 6-3=3. Click the third result to select 6th result by clicking the first a tag.
 
 task: use the textbox to enter "Thaddeus" and press "Search", then find and click the 7th search result.
 plan:
@@ -128,7 +128,7 @@ plan:
 2. type Baby
 3. clickxpath //*[@id="search"]
 4. clickxpath //*[@id="pagination"]/li[4]/a // First, move to the corresponding result page. You need to move to the second page where the 6th result is located
-5. clickxpath //*[@id="page-content"]/div[3]/a // Each page contains three results and 6-3=3. Click the thrid result to select 6th result by clicking the first a tag.
+5. clickxpath //*[@id="page-content"]/div[3]/a // Each page contains three results and 6-3=3. Click the third result to select 6th result by clicking the first a tag.
 
 task: use the textbox to enter "Grill" and press "Search", then find and click the 8th search result.
 plan:

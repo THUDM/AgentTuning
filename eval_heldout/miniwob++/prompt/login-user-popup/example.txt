@@ -1,6 +1,6 @@
 Example plans)
 task: Enter the username "emile" and the password "R8QX" into the text fields and press login.
-plan: If there is a pop-up window in the webpage you must fisrt close it by "clickxpath //*[@id="popup-cancel"]" instruction and resume the plan by repeating the previous action.
+plan: If there is a pop-up window in the webpage you must first close it by "clickxpath //*[@id="popup-cancel"]" instruction and resume the plan by repeating the previous action.
 1. clickxpath //*[@id="username"]
 2. type emile
 3. clickxpath //*[@id="password"]
@@ -8,7 +8,7 @@ plan: If there is a pop-up window in the webpage you must fisrt close it by "cli
 5. clickxpath //*[@id="subbtn"]
 
 task: Enter the username "kgw" and the password "1234" into the text fields and press login.
-plan: If there is a pop-up window in the webpage you must fisrt close it by "clickxpath //*[@id="popup-cancel"]" instruction and resume the plan by repeating the previous action.
+plan: If there is a pop-up window in the webpage you must first close it by "clickxpath //*[@id="popup-cancel"]" instruction and resume the plan by repeating the previous action.
 1. clickxpath //*[@id="username"]
 2. type kgw
 3. clickxpath //*[@id="password"]
@@ -16,7 +16,7 @@ plan: If there is a pop-up window in the webpage you must fisrt close it by "cli
 5. clickxpath //*[@id="subbtn"]
 
 task: Enter the username "posgnu" and the password "6602" into the text fields and press login.
-plan: If there is a pop-up window in the webpage you must fisrt close it by "clickxpath //*[@id="popup-cancel"]" instruction and resume the plan by repeating the previous action.
+plan: If there is a pop-up window in the webpage you must first close it by "clickxpath //*[@id="popup-cancel"]" instruction and resume the plan by repeating the previous action.
 1. clickxpath //*[@id="username"]
 2. type posgnu
 3. clickxpath //*[@id="password"]
@@ -24,7 +24,7 @@ plan: If there is a pop-up window in the webpage you must fisrt close it by "cli
 5. clickxpath //*[@id="subbtn"]
 
 task: Enter the username "posgnu" and the password "6602" into the text fields and press login.
-plan: If there is a pop-up window in the webpage you must fisrt close it by "clickxpath //*[@id="popup-cancel"]" instruction and resume the plan by repeating the previous action.
+plan: If there is a pop-up window in the webpage you must first close it by "clickxpath //*[@id="popup-cancel"]" instruction and resume the plan by repeating the previous action.
 1. clickxpath //*[@id="username"]
 2. type posgnu
 3. clickxpath //*[@id="password"]

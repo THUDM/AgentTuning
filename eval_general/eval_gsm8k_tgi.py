@@ -106,7 +106,7 @@ def clean_answer(text):
 
 def generate_sample(prompt, ip, post_from, post_to):
     ip_address = f"http://{ip}:"
-    controller_addr_pool = [ip + str(i) for i in range(post_from, post_to + 1)]
+    controller_addr_pool = [ip_address + str(i) for i in range(post_from, post_to + 1)]
 
     def request_answer(max_new_tokens):
         data = {

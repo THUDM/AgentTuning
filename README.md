@@ -152,3 +152,8 @@ If you find our work useful, please consider citing AgentTuning:
       primaryClass={cs.CL}
 }
 ```
+## All Thanks To Our Contributors 
+
+<a href="https://github.com/THUDM/AgentTuning/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=THUDM/AgentTuning" />
+</a>
